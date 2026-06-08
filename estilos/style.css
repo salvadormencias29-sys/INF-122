@@ -94,7 +94,7 @@ header #base .nav ul li a:hover {
 .navbar {
   width: 100%;
   background-color: rgb(18, 18, 18);
-  position: fixed;
+  position: fixed !important;
   z-index: 1000;
 }
 .navbar-brand {
