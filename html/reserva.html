@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación Hecha - Kalia Barber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0b0b;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .contenedor-hecho {
+            padding-top: 140px;
+            padding-bottom: 60px;
+            background-color: #0b0b0b;
+            min-height: calc(100vh - 120px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .tarjeta-confirmacion {
+            background: #161616;
+            border: 1px solid #282828;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 550px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+        }
+
+        .icono-exito {
+            background-color: #c1924c;
+            color: #0b0b0b;
+            width: 60px;
+            height: 60px;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 20px auto;
+        }
+
+        .tarjeta-confirmacion h1 {
+            color: #ffffff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .subtitulo-exito {
+            color: #a0a0a0;
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .detalles-reserva {
+            background: #1c1c1c;
+            border-left: 4px solid #c1924c;
+            padding: 25px;
+            border-radius: 4px;
+            text-align: left;
+        }
+
+        .detalles-reserva h3 {
+            color: #c1924c;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detalle-linea {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #2a2a2a;
+            padding-bottom: 8px;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        .detalle-linea strong {
+            color: #aaaaaa;
+        }
+
+        .resaltado-dorado {
+            color: #c1924c;
+            font-weight: bold;
+        }
+
+        .mensaje-bloque {
+            display: block;
+            border-bottom: none;
+            margin-top: 15px;
+            background: #121212;
+            padding: 10px 15px;
+            border-radius: 6px;
+        }
+
+        .mensaje-bloque p {
+            margin: 5px 0 0 0;
+            font-style: italic;
+            color: #888888;
+        }
+
+        .btn-volver {
+            display: block;
+            margin-top: 30px;
+            background-color: transparent;
+            color: #c1924c;
+            border: 2px solid #c1924c;
+            padding: 12px 30px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.95rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .btn-volver:hover {
+            background-color: #c1924c;
+            color: #0b0b0b;
+            box-shadow: 0 4px 15px rgba(193, 146, 76, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-volver:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-hecho">
+        <div class="tarjeta-confirmacion">
+            <div class="icono-exito">✓</div>
+            <h1>¡RESERVACIÓN HECHA!</h1>
+            <p class="subtitulo-exito">
+                Tu espacio ha sido agendado con éxito. Te esperamos.
+            </p>
+
+            <div class="detalles-reserva">
+                <h3>Resumen de tu cita:</h3>
+                
+                <div class="detalle-linea">
+                    <strong>Cliente:</strong> <span id="res-nombre"></span>
+                </div>
+                <div class="detalle-linea">
+                    <strong>Teléfono:</strong> <span id="res-telefono"></span>
+                </div>
+                <div class="detalle-linea">
+                    <strong>Correo:</strong> <span id="res-correo"></span>
+                </div>
+                <div class="detalle-linea">
+                    <strong>Servicio:</strong> <span class="resaltado-dorado" id="res-servicio"></span>
+                </div>
+                <div class="detalle-linea">
+                    <strong>Barbero:</strong> <span id="res-barbero"></span>
+                </div>
+                <div class="detalle-linea">
+                    <strong>Fecha:</strong> <span id="res-fecha"></span>
+                </div>
+                <div class="detalle-linea">
+                    <strong>Hora:</strong> <span id="res-hora"></span>
+                </div>
+                
+                <div class="detalle-linea mensaje-bloque" id="bloque-mensaje" style="display: none;">
+                    <strong>Nota adicional:</strong>
+                    <p id="res-mensaje"></p>
+                </div>
+            </div>
+            
+            <a href="index.html" class="btn-volver">Volver al Inicio</a>
+        </div>
+    </div>
+
+    <script>
+        const reservaGuardada = localStorage.getItem('reservaActual');
+
+        if (reservaGuardada) {
+            const datos = JSON.parse(reservaGuardada);
+
+            document.getElementById('res-nombre').innerText = datos.nombre;
+            document.getElementById('res-telefono').innerText = datos.telefono;
+            document.getElementById('res-correo').innerText = datos.correo;
+            document.getElementById('res-servicio').innerText = datos.servicio;
+            document.getElementById('res-barbero').innerText = datos.barbero;
+            document.getElementById('res-fecha').innerText = datos.fecha;
+            
+            document.getElementById('res-hora').innerText = `${datos.hora} p.m.`;
+
+            if (datos.mensaje && datos.mensaje !== "Ninguno" && datos.mensaje.trim() !== "") {
+                document.getElementById('res-mensaje').innerText = `"${datos.mensaje}"`;
+                document.getElementById('bloque-mensaje').style.display = "block";
+            }
+        } else {
+            document.querySelector('.detalles-reserva').innerHTML = `
+                <h3 style="color: #ff4d4d; border-bottom: none;">Error de lectura</h3>
+                <p style="color: #a0a0a0; font-size: 0.9rem;">No se encontraron registros de citas recientes activos.</p>
+            `;
+        }
+    </script>
+</body>
+</html>
