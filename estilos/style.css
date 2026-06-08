@@ -3,90 +3,146 @@ body{
     padding: 0;
 }
 
-header{
-    height: 100vh;
-    background-image: url(https://i0.wp.com/gentleman.com.mx/wp-content/uploads/2019/02/barberias-ciudad-de-mexico.jpg?w=980&ssl=1);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+header {
+  height: 100vh;
+  background-image: url(https://i0.wp.com/gentleman.com.mx/wp-content/uploads/2019/02/barberias-ciudad-de-mexico.jpg?w=980&ssl=1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-header #base{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    opacity: 60%;
+header #base {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-header #base h1.nom{
-    color: white;
-    opacity: .85;
-    text-transform: uppercase;
-    font-family: "Bebas Neue", sans-serif;
-    text-align: center;
-    font-size: 1000%;
-    color: #c1924c;
-    margin-bottom: 5px;
+header #base h1.nom {
+  color: white;
+  opacity: 0.85;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  font-size: 1000%;
+  color: #c1924c;
+  margin-bottom: 5px;
 }
 
-header #base p{
-    color: #c1924c;
-    text-align: center !important;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
-    margin: 10px 0;
+header #base p {
+  color: #c1924c;
+  text-align: center !important;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px 0;
+  opacity: 0.7;
 }
 
-header #base .nav{
-    display: flex;
-    align-items: center !important;
-    justify-content: center;
+header #base .nav {
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
 }
 
-header #base .nav h1{
-    width: 40%;
-    margin: 20px;
-    color: #c1924c;
-    font-family: "Bebas Neue", sans-serif;
-    text-align: center;
+header #base .nav h1 {
+  margin: 20px;
+  color: #c1924c;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  display: flex;
 }
 
-header #base .nav ul{
-    width: 60%;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
+header #base .nav ul {
+  width: 60%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
-header #base .nav ul li{
-    list-style: none;
-    text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
+header #base .nav ul li {
+  list-style: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 
-header #base .nav ul li#pos a{
-    background-color: #c1924c;
-    color: black;
-    opacity: 100%;
+header #base .nav ul li#pos a {
+  background-color: #c1924c;
+  color: black;
+  opacity: 100%;
 }
 
-header #base .nav ul li a{
-    transition: all 3ms;
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-    border-radius: 30px;
-    transition: all 0.3ms;
-    opacity: 100%;
+header #base .nav ul li a {
+  transition: all 3ms;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 30px;
+  transition: all 0.3ms;
+  opacity: 100%;
 }
 
-header #base .nav ul li a:hover{
-    background-color: #c1924c;
-    transition: .3s;
-    color: black;
-    opacity: 100%;
+header #base .nav ul li a:hover {
+  background-color: #c1924c;
+  transition: 0.3s;
+  color: black;
+  opacity: 100%;
 }
+
+.navbar {
+  width: 100%;
+  background-color: rgb(18, 18, 18);
+  position: fixed;
+  z-index: 1000;
+}
+.navbar-brand {
+  color: #c1924c !important;
+  font-family: "Montserrat", sans-serif;
+}
+.navbar-brand:hover {
+  color: #c1924c;
+}
+.nav-link {
+  color: #c1924c !important;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.nav-link:hover {
+  color: black !important;
+  background-color: #c1924c;
+  border-radius: 20px;
+  transform: scale(1.05);
+}
+.navbar-nav {
+  gap: 30px;
+  z-index: 1000;
+}
+
+
+.boton {
+  background-color: #c1924c;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s ease;
+  padding: 10px 50px;
+  opacity: 0.7;
+  text-decoration: none;
+}
+.boton:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
+}
+.boton h1 {
+  font-size: 25px;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+}
+
 
 /*-----PAGE #1-----*/
 
